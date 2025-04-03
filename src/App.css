@@ -1,0 +1,788 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+
+
+
+/*css*/
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Comfortaa:wght@300..700&display=swap');
+
+body{
+    background-color: lightgray;
+    font-family: "Comfortaa", serif;
+
+}
+body a,button,:placeholder-shown,select,input{
+    font-family: "Comfortaa", serif;
+
+}
+
+
+
+
+
+.list {
+        display:grid;
+        width: 100%;
+        min-height: 1000px;
+        border-radius: 10px;
+        margin-top: 50px;
+        grid-template-columns:  1fr 1fr  1fr;
+        grid-template-rows: 1fr 1fr 1fr 2fr  ;
+        text-align: center;
+        background-color: #2c2c2c; /* Тёмно-серый фон */
+        border-radius: 8px;
+        grid-gap: 40px;
+
+    
+    }   
+
+.list img{
+        width: 250px;
+        height: 250px;
+        margin-top: 100px;
+    }    
+.list :nth-child(-n+4) img{
+        margin-top: 30px;
+    }
+     
+    .tourInList:hover{
+        transform: scale(1.1);
+        transition-duration: 0.2s;
+        opacity: 0.9;
+    }
+
+    .tourInList {
+        margin-top: 20px;
+        background-color: #1e1e1e; /* Очень тёмно-серый */
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+      }
+
+
+.tourInList:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+.tourInList img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .tourInList h3 {
+    margin: 0;
+    padding: 10px;
+    font-size: 18px;
+    color: #f4a261; /* Коричневый акцент */
+    background-color: #3a3a3a; /* Серый фон под текстом */
+    text-align: center;
+  }
+
+  #overlayMenu {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    justify-content: center;
+    background-color: #8B4513;
+    align-items: center;
+    z-index: 1000;
+    border: none;
+  }
+  #infoInModal * {
+    color: black;
+  }
+
+
+#infoInModal{
+    background-color: #2c2c2c; /* Тёмно-серый фон */
+  padding: 20px;
+  border-radius: 8px;
+  color: #eaeaea; /* Светлый текст */
+  position: relative;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+
+}
+
+
+#photoInModal img {
+    width: 30%;
+    margin: 5px;
+    border-radius: 4px;
+    border: 1px solid #444; /* Тёмно-серый бордер */
+  }
+
+  #infoInModal img {
+    width: 30%;
+    margin: 5px;
+    border-radius: 4px;
+    border: 1px solid #444; /* Тёмно-серый бордер */
+  }
+  
+  
+
+  .reviews {
+    margin-top: 20px;
+  }
+  
+  .reviews h3,
+  .reviews h4 {
+    font-size: 18px;
+    color: #f4a261; /* Коричневый акцент */
+    margin-bottom: 10px;
+  }
+  
+  .review {
+    text-align: left;
+    background-color: #1e1e1e; /* Очень тёмно-серый */
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    border: 1px solid #444; /* Тёмно-серый бордер */
+  }
+  
+  .add-review input {
+    width: calc(50% - 10px);
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #3a3a3a;
+    color: #eaeaea;
+    margin-bottom: 10px;
+  }
+  .add-review input:nth-child(1) {
+    margin-right: 140px;
+  }
+  
+  .add-review button {
+    padding: 10px 20px;
+    background-color: #6d4c41; /* Тёмно-коричневый */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-review button:hover {
+    background-color: #8d6e63; /* Светлый коричневый */
+  }
+  
+  p {
+    color: #bcbcbc; /* Светло-серый */
+  }
+
+
+  #closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 70px;
+    background: #b23c17; /* Тёмно-красный */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  #closeBtn:hover {
+    background: #e64a19; /* Светлее красный */
+  }
+
+
+  .map img {
+    width: 100%;
+    border-radius: 4px;
+  }
+  
+  #searchBtn {
+    padding: 5px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+
+  #searchBtn:hover {
+    padding: 5px;
+    background-color: #333;
+    background-color: lightgreen;
+    transition-duration: 0.5s;
+    border: none;
+    cursor: pointer;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+    position: fixed;
+  }
+  .dropdown:hover .dropdown-content {
+    display: grid;
+  }
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropbtn {
+    background-color: #333;
+    color: black;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+
+    background-color: #f1f1f1;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+    width: 70%;
+    height: auto;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+}
+
+
+
+#photoInModal{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr ;
+}
+#photoInModal img{
+    width: 90%;
+    height: 300px;
+    margin: 10px;
+    
+   
+}
+.map img{
+    width: 400px;
+    height: 400px;
+    padding-top: 100px;
+}
+
+
+
+.sorman{
+    width: 100%;
+}
+
+.sorman h2 {
+    font-size: 24px;
+    color: #f4a261; /* Коричневый акцент */
+    margin-bottom: 20px;
+  }
+
+  .tourContainer h3 {
+    padding: 10px;
+    background-color: #3a3a3a; /* Серый фон */
+    text-align: center;
+    color: #f4a261; /* Коричневый акцент */
+    margin: 0;
+  }
+
+.sorted p {
+    color: #bcbcbc; /* Светло-серый текст */
+  }
+  .tourContainer {
+    background-color: #1e1e1e; /* Очень тёмно-серый */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .tourContainer:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  }
+
+.tourInSort{
+    text-align: center;
+
+}
+.tourContainer img {
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+  }
+
+
+
+
+
+  .searchman{
+    width: 100%;
+}
+
+.searchman h2 {
+    font-size: 24px;
+    color: #f4a261; /* Коричневый акцент */
+    margin-bottom: 20px;
+  }
+
+  .tourInSearch h3 {
+    padding: 10px;
+    background-color: #3a3a3a; /* Серый фон */
+    text-align: center;
+    color: #f4a261; /* Коричневый акцент */
+    margin: 0;
+  }
+
+.searched p {
+    color: #bcbcbc; /* Светло-серый текст */
+  }
+  .tourInSearch {
+    background-color: #1e1e1e; /* Очень тёмно-серый */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .tourInSearch:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  }
+
+.tourInSearch{
+    text-align: center;
+
+}
+.tourInSearch img {
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+  }
+
+
+
+  .footer {
+    background-color: #2c2c2c; /* Тёмный фон футера */
+    color: #eaeaea; /* Светлый текст */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+    border-top: 1px solid #444;
+  }
+  
+  .footer .logos {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+  
+  .footer .logos a {
+    display: block;
+  }
+  
+  .footer .logos img {
+    width: 65px;
+    transition: transform 0.3s ease;
+  }
+  
+  .footer .logos img:hover {
+    transform: scale(1.1); /* Увеличение изображения при наведении */
+  }
+  
+  .footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .footer ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer ul li:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Адаптивность для мобильных устройств */
+  @media screen and (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer .logos {
+      margin-bottom: 20px;
+    }
+  
+    .footer ul {
+      font-size: 12px;
+    }
+  }
+  
+
+
+  
+  .requestForm {
+    background-color: #2c2c2c; /* Тёмно-серый фон */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 30px;
+    width: 100%;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+  
+  .requestForm form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .requestForm label {
+    color: #f4a261; /* Коричневый акцент */
+    font-size: 16px;
+  }
+  
+  .requestForm input,
+  .requestForm select {
+    padding: 10px;
+    background-color: #3a3a3a; /* Серый фон */
+    border: 1px solid #444;
+    border-radius: 4px;
+    color: #eaeaea; /* Светлый текст */
+    font-size: 14px;
+    margin-left: 25%;
+    width: 75%;
+  }
+  
+  .requestForm input[type="number"] {
+    width: 100px;
+  }
+  
+  .requestForm input[readonly] {
+    background-color: #2c2c2c;
+    color: #eaeaea;
+  }
+  
+  .requestForm button {
+    padding: 12px 20px;
+    background-color: #6d4c41; /* Тёмно-коричневый */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .requestForm button:hover {
+    background-color: #8d6e63; /* Светлый коричневый */
+  }
+  
+
+
+  .admin {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #2c2c2c; /* Тёмно-серый фон */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: #eaeaea; /* Светлый текст */
+  }
+  
+  .admin h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #f4a261; /* Коричневый акцент */
+    text-align: center;
+  }
+  
+  .adminPannel,
+  #listOnAdmin,
+  #requestsList {
+    margin-bottom: 40px;
+  }
+  
+  .adminPannel input,
+  .adminPannel textarea,
+  .adminPannel select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #444; /* Тёмный серый бордер */
+    border-radius: 4px;
+    background-color: #3a3a3a; /* Более светлый серый фон */
+    font-size: 14px;
+    color: #eaeaea; /* Светлый текст */
+  }
+  
+  .adminPannel input[type="file"] {
+    padding: 5px;
+  }
+  
+  .adminPannel button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6d4c41; /* Тёмно-коричневый */
+    color: #fff; /* Белый текст */
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .adminPannel button:hover {
+    background-color: #8d6e63; /* Светлый коричневый */
+  }
+  
+  #listOnAdmin .tour,
+  #requestsList .request {
+    border: 1px solid #444; /* Тёмно-серый бордер */
+    border-radius: 4px;
+    background-color: #1e1e1e; /* Очень тёмно-серый */
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  
+  #listOnAdmin .tour h3,
+  #requestsList .request p {
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: #eaeaea; /* Светлый текст */
+  }
+  
+  #listOnAdmin .tour button,
+  #requestsList .request button {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #b23c17; /* Тёмно-красный */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #listOnAdmin .tour button:hover,
+  #requestsList .request button:hover {
+    background-color: #e64a19; /* Светлее красный */
+  }
+  
+  h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #f4a261; /* Коричневый акцент */
+  }
+  
+  p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #bcbcbc; /* Светло-серый */
+  }
+  
+  button:focus,
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+    border-color: #f4a261; /* Коричневый акцент */
+    box-shadow: 0 0 4px rgba(244, 162, 97, 0.5); /* Тень с коричневым */
+  }
+  
+
+
+  @media (max-width: 768px) {
+    .requestForm {
+      padding: 15px;
+    }
+  
+    .requestForm form {
+      gap: 10px;
+    }
+  
+    .requestForm input,
+    .requestForm select {
+      font-size: 12px;
+    }
+  
+    .requestForm button {
+      font-size: 14px;
+    }
+  }
+  
+
+
+  .header {
+    background-color: #2c2c2c; /* Тёмно-серый фон */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+  }
+  
+  .header a {
+    color: #f4a261; /* Коричневый акцент */
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .header a:hover {
+    background-color: #3a3a3a; /* При наведении фон немного светлеет */
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropbtn {
+    background-color: #6d4c41; /* Тёмно-коричневый */
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dropbtn:hover {
+    background-color: #8d6e63; /* Светлый коричневый при наведении */
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #3a3a3a;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 4px;
+  }
+  
+  .dropdown.active .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content a {
+    color: #eaeaea; /* Светлый текст */
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #444;
+  }
+  
+  #searchInput {
+    background-color: #3a3a3a;
+    color: #eaeaea;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+    width: 500px;
+  }
+  
+  #searchBtn {
+    background-color: #6d4c41;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #searchBtn:hover {
+    background-color: #8d6e63;
+  }
+  
+  /* Стиль для мобильного экрана (гамбургер-меню) */
+  @media screen and (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    #searchInput {
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    .dropdown {
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+    }
+  
+    .dropbtn {
+      width: 100%;
+    }
+  
+    .dropdown-content a {
+      text-align: center;
+    }
+  }
+  
